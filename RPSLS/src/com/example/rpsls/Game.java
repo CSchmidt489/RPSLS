@@ -14,6 +14,13 @@ public class Game extends Activity {
 		setContentView(R.layout.activity_game);
 		WebView w=(WebView) findViewById(R.id.webView1); 
 		w.loadUrl("file:///android_assets/game.html");
+		
+		protected void displayScores(){
+			for(int i=0; i<scores.length; i++){
+				// decouples WebView and runOnUIThread
+				game.runCommand("setScoreByPlayerID(“+i+","+scores[i]+")");
+			}
+		}
 	}
 
 	@Override
