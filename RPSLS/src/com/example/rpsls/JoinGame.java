@@ -1,5 +1,6 @@
 package com.example.rpsls;
 
+
 import android.app.ActionBar.LayoutParams;
 import android.app.Activity;
 import android.app.ListActivity;
@@ -39,7 +40,7 @@ public class JoinGame extends Activity {
 SimpleCursorAdapter mAdapter;
 
 // These are the Contacts rows that we will retrieve
-static final String[] PROJECTION = new String[] {ContactsContract.Data._ID,
+final String[] PROJECTION = new String[] {ContactsContract.Data._ID,
         ContactsContract.Data.DISPLAY_NAME};
 
 // This is the select criteria
